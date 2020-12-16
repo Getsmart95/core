@@ -20,6 +20,14 @@ type clientAccount struct {
 	Message string `json:"message"`
 }
 
+type service struct {
+	Id int64 `json:"ID"`
+	Name string `json:"name"`
+	AccountNumber int64 `json:"accountNumber"`
+	Ammount string `json:"ammount"`
+	ServiceAccountNumber int64 `json:"serviceAccountNumber"`
+}
+
 func GetATMsForClient(db *pgxpool.Pool) (err error) {
 	ms, err := services.GetAllATMs(db)
 	if err != nil {
@@ -93,10 +101,7 @@ func TransferToByHandler(w http.ResponseWriter, r *http.Request, p httprouter.Pa
 	if err != nil {
 		w.WriteHeader(400)
 	}
-	//json.NewEncoder(w).Encode(Accounts)
-
 }
-
 
 func TransferToAccount(AccountNumber int64, TransferCardNumber string, Amount int, Message string, TransferAccountNumber int64, db *pgxpool.Pool) (err error) {
 
@@ -125,7 +130,112 @@ func TransferToAccount(AccountNumber int64, TransferCardNumber string, Amount in
 	return nil
 }
 
-/////////////////////////
+func GetAllServices(w http.ResponseWriter, r *http.Request, p httprouter.Params) {
+	db := postgres.Connect()
+	w.Header().Set("Access-Control-Allow-Headers", "Content-Type")
+	w.Header().Set("Access-Control-Allow-Origin", "*")
+	w.Header().Set("Content-Type", "application/json")
+
+	Services := []models.Service{}
+
+	rows, err := db.Query(context.Background(), postgres.GetAllServices)
+	if err != nil {
+		w.WriteHeader(400)
+	}
+
+	for rows.Next(){
+		Service := models.Service{}
+		err := rows.Scan(&Service.ID, &Service.Name, &Service.ServiceAccountNumber)
+		if err != nil {
+			w.WriteHeader(400)
+		}
+		Services = append(Services, Service)
+	}
+	if rows.Err() != nil{
+		w.WriteHeader(400)
+	}
+	json.NewEncoder(w).Encode(Services)
+
+}
+
+func PayServiceByHandler(w http.ResponseWriter, r *http.Request, p httprouter.Params) {
+	db := postgres.Connect()
+	w.Header().Set("Access-Control-Allow-Headers", "Content-Type")
+	w.Header().Set("Access-Control-Allow-Origin", "*")
+	w.Header().Set("Content-Type", "application/json")
+	var data service
+	Services := []models.Service{}
+
+	json.NewDecoder(r.Body).Decode(&data)
+	Ammount, _ := strconv.Atoi(data.Ammount)
+	err := Transfer(data.AccountNumber, Ammount, data.Id, db)
+	if err != nil {
+		fmt.Println("Перевод невозможен")
+	}
+	json.NewEncoder(w).Encode(Services)
+
+}
+
+
+func Transfer(accountNumber int64, Ammount int, ServiceID int64, db *pgxpool.Pool) (err error) {
+
+	var Message string
+	Message = "Оплата услуги"
+
+	var ServiceAccountNumber int64
+	err = db.QueryRow(context.Background(), `select account_number from services where id = ($1)`, ServiceID).Scan(&ServiceAccountNumber)
+	if err != nil {
+		return err
+	}
+
+	_, err = db.Exec(context.Background(), `UPDATE accounts set balance = balance - ($1) where account_number = ($2)`, Ammount, accountNumber)
+	if err != nil {
+		return err
+	}
+	_, err = db.Exec(context.Background(), `UPDATE accounts set balance = balance + ($1) where account_number = ($2)`, Ammount, ServiceAccountNumber)
+	if err != nil {
+		return err
+	}
+	_, err = db.Exec(context.Background(), `insert into histories(sender_account_number, recipient_account_number, money, message, service_id)
+											values( $1, $2, $3, $4, $5 )`, accountNumber, ServiceAccountNumber, Ammount, Message, ServiceID)
+	if err != nil {
+		return err
+	}
+
+
+	return nil
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//////
+///////////////////
 //func ChooseAccount(id int64, db *pgxpool.Pool) (AccountNumber int64, err error) {
 //	fmt.Println("Выберите счет:")
 //	accounts, err := SearchAccountByIdHandler(id, db)

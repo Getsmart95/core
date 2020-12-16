@@ -3,7 +3,7 @@ package models
 type Service struct{
 	ID int
 	Name string
-	AccountNumber int64
+	ServiceAccountNumber int64
 }
 
 type ServiceList struct{

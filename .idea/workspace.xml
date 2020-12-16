@@ -2,31 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="56dc9bcd-2442-46cf-8439-ff44c7ae8226" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/core.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/87817df0-ee58-45ff-a21e-da609bbfc340.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/87817df0-ee58-45ff-a21e-da609bbfc340/storage_v2/_src_/database/postgres.edMnLQ.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/87817df0-ee58-45ff-a21e-da609bbfc340/storage_v2/_src_/database/postgres.edMnLQ/schema/information_schema.FNRwLQ.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/87817df0-ee58-45ff-a21e-da609bbfc340/storage_v2/_src_/database/postgres.edMnLQ/schema/pg_catalog.0S1ZNQ.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/87817df0-ee58-45ff-a21e-da609bbfc340/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/controllers/AuthController.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/controllers/clientController.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/postgres/DDLs.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/postgres/DMLs.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/postgres/db.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/postgres/dbinit.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/ATM.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/Account.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/Address.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/Client.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/History.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/Service.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/87817df0-ee58-45ff-a21e-da609bbfc340.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/87817df0-ee58-45ff-a21e-da609bbfc340.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/clientController.go" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/clientController.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/postgres/DMLs.go" beforeDir="false" afterPath="$PROJECT_DIR$/database/postgres/DMLs.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/Service.go" beforeDir="false" afterPath="$PROJECT_DIR$/models/Service.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,7 +25,57 @@
     <option name="HIDDEN_KINDS">
       <set />
     </option>
-    <expand />
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="postgres@localhost" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="postgres@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="postgres@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="postgres: database" type="162271b6:PgImplModel$Database" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="postgres@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="postgres: database" type="162271b6:PgImplModel$Database" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="postgres@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="postgres: database" type="162271b6:PgImplModel$Database" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="public: schema" type="983ebcf7:PgImplModel$Schema" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="postgres@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="postgres: database" type="162271b6:PgImplModel$Database" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="public: schema" type="983ebcf7:PgImplModel$Schema" />
+        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="postgres@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="postgres: database" type="162271b6:PgImplModel$Database" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="public: schema" type="983ebcf7:PgImplModel$Schema" />
+        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="accounts: table" type="69fad909:PgImplModel$LocalTable" />
+      </path>
+    </expand>
     <select />
   </component>
   <component name="FileTemplateManagerImpl">
@@ -94,6 +125,11 @@
               <path>
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
                 <item name="root:postgres@localhost" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="com.intellij.database.console.session.MessageBusSession@3c3285e1" type="9fbbdea:ServiceModel$ServiceNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="root:postgres@localhost" type="7427dc5b:ServiceModel$ServiceGroupNode" />
                 <item name="com.intellij.database.console.session.MessageBusSession@5286eb18" type="9fbbdea:ServiceModel$ServiceNode" />
               </path>
             </expand>
@@ -115,22 +151,22 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="525" y="221" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.834@0.0.1536.834" timestamp="1607763753924" />
-    <state width="1024" height="214" key="GridCell.Tab.0.bottom" timestamp="1608017502137">
+    <state width="1024" height="213" key="GridCell.Tab.0.bottom" timestamp="1608153500286">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1024" height="214" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1608017502137" />
-    <state width="1024" height="214" key="GridCell.Tab.0.center" timestamp="1608017502137">
+    <state width="1024" height="213" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1608153500286" />
+    <state width="1024" height="213" key="GridCell.Tab.0.center" timestamp="1608153500286">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1024" height="214" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1608017502137" />
-    <state width="1024" height="214" key="GridCell.Tab.0.left" timestamp="1608017502136">
+    <state width="1024" height="213" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1608153500286" />
+    <state width="1024" height="213" key="GridCell.Tab.0.left" timestamp="1608153500286">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1024" height="214" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1608017502136" />
-    <state width="1024" height="214" key="GridCell.Tab.0.right" timestamp="1608017502137">
+    <state width="1024" height="213" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1608153500286" />
+    <state width="1024" height="213" key="GridCell.Tab.0.right" timestamp="1608153500286">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1024" height="214" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1608017502137" />
+    <state width="1024" height="213" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1608153500286" />
     <state x="431" y="155" key="search.everywhere.popup" timestamp="1608015056356">
       <screen x="0" y="0" width="1536" height="834" />
     </state>

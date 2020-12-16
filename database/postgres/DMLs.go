@@ -32,5 +32,5 @@ const SearchClientByLogin = `select id, surname from clients where login = ($1)`
 
 const SearchAccountByID = `select id, client_id, account_number, balance, status, card_number from accounts where status = true and client_id = ($1)`
 
-const GetAllServices = `select id, name from services`
+const GetAllServices = `select id, name, account_number from services`
 
